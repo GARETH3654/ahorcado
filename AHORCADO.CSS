@@ -1,0 +1,9 @@
+body{
+  background-image: url(http://conceptodefinicion.de/wp-content/uploads/2014/10/guerra.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center
+}
+body{
+  margin: 50px;
+}
