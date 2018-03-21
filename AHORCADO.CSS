@@ -7,9 +7,15 @@ body{
 body{
   margin: 50px
 }
-input{
+#ahorcado{
   width:50%;
 }
-button{
-  width: 50px;
+.inicio_juego{
+    width: 50px;
+    border-bottom: none;
+    text-align: center;
+    float: ce
+}
+input{
+  width: 30px;
 }
