@@ -1,10 +1,12 @@
 'use strict';
+var word;
+var palabras;
 //   var word= form.ahorcado.value
 var abecedario = [
   "a","b","c","d","e","f","g","h","i","j","k","l","m","n","ñ","o","p",
   "q","r","s","t","u","v","w","x","y","z"
 ]
-var palabras = [
+ palabras = [
   "cohete",
   "bomba",
   "explocion",
@@ -23,27 +25,27 @@ var palabras = [
 ]
 function obtenerPalabra(){
   var random= Math.floor(Math.random()*14)
-
-
-console.log(palabras[random]);
-
+  var palabrasAhorcados = (palabras[random]);
+  document.querySelector('.palabra'). innerHTML = palabrasAhorcados;
 }
+
 function inicio_juego (letra){
-  var word = letra.value;
-  word = console.log(letra.value);
+  word = letra.value;
   obtenerPalabra()
-}
-function ponerLetra (letra){
-  var word = letra.value;
-  word = console.log(letra.value);
+  document.querySelector('.inicio_juego'). innerHTML = word;
 }
 
+function ponerLetra (letra){
+  word = letra.value;
+  document.querySelector('.ponerLetra'). innerHTML = word;
+}
 
 document.addEventListener('keydown',function ponerTecladoLetra(event) {
   var letraTeclado = event.key
   letraTeclado = letraTeclado.toUpperCase()
   console.log(letraTeclado);
 
+  document.querySelector('.ponerLetra'). innerHTML = letraTeclado;
 })
 
 
