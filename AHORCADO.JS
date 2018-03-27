@@ -27,6 +27,8 @@ function obtenerPalabra(){
   var random= Math.floor(Math.random()*14)
   var palabrasAhorcados = (palabras[random]);
   document.querySelector('.palabra'). innerHTML = palabrasAhorcados;
+  nuevaPalabra = palabra.split('')
+  console.log(nuevaPalabra);
 }
 
 function inicio_juego (letra){

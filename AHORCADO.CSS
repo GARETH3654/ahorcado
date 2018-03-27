@@ -14,8 +14,13 @@ body{
     width: 50px;
     border-bottom: none;
     text-align: center;
-    float: ce
+    float: center
 }
 input{
-  width: 30px;
+  width: 50px;
+}
+
+.palabra{
+  background-color: white;
+  width: 150px;
 }
