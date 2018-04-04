@@ -7,6 +7,9 @@ body{
 body{
   margin: 50px
 }
+h1{
+  text-align: center;
+}
 #ahorcado{
   width:50%;
 }
@@ -22,5 +25,5 @@ input{
 
 .palabra{
   background-color: white;
-  width: 150px;
+  width: 170px;
 }

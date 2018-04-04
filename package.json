@@ -1,0 +1,24 @@
+{
+  "name": "ahorcado",
+  "version": "1.0.0",
+  "description": "proyecto ahorcado",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "servidor": "node_modules/.bin/live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GARETH3654/ahorcado.git"
+  },
+  "author": "Gareth Ivan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GARETH3654/ahorcado/issues"
+  },
+  "homepage": "https://github.com/GARETH3654/ahorcado#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.0"
+  }
+}
