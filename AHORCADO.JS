@@ -1,6 +1,9 @@
 'use strict';
 var word;
+var letter;
 var palabras;
+var palabrasAhorcado;
+var letraTeclado;
 //   var word= form.ahorcado.value
 var abecedario = [
   "a","b","c","d","e","f","g","h","i","j","k","l","m","n","ñ","o","p",
@@ -25,37 +28,48 @@ var abecedario = [
 ]
 function obtenerPalabra(){
   var random= Math.floor(Math.random()*14)
-  var palabrasAhorcados = (palabras[random]);
-  document.querySelector('.palabra'). innerHTML = palabrasAhorcados;
-  palabrasAhorcados= palabrasAhorcados.split('');
+  palabrasAhorcado = (palabras[random]);
+  document.querySelector('.palabra'). innerHTML = palabrasAhorcado;
+  palabrasAhorcado= palabrasAhorcado.split('');
 
-  console.log(palabrasAhorcados);
+  console.log(palabrasAhorcado);
 }
 function compararLetra() {
-  for (var i = 0; i < word.length; i++) {
-    if (word = palabrasAhorcados[i]) {
+  for (var i = 0; i < palabrasAhorcado.length; i++) {
+    if (letter == palabrasAhorcado [i]) {
         console.log('le atinaste a la letra' + i);
+        alert('le atinaste a la letra ' + i);
+    }else if (letraTeclado == palabrasAhorcado [i]) {
+        console.log('le atinaste a la letra' + i);
+        alert('le atinaste a la letra ' + i);
+    }else if (letter != palabrasAhorcado [i]) {
+      console.log('fallaste intentalo otravez');
+      alert('fallaste');
     }
+    console.log(letter);
+    console.log(palabrasAhorcado);
   }
 }
 function inicio_juego (letra){
   word = letra.value;
   obtenerPalabra()
   document.querySelector('.inicio_juego'). innerHTML = word;
-}
-
-function ponerLetra (letra){
-  word = letra.value;
-  document.querySelector('.ponerLetra'). innerHTML = word;
   console.log(word);
 }
 
+function ponerLetra (letra){
+  letter = letra.value;
+  document.querySelector('.ponerLetra'). innerHTML = word;
+  console.log(letter);
+  compararLetra();
+}
+
 document.addEventListener('keydown',function ponerTecladoLetra(event) {
-  var letraTeclado = event.key
+  letraTeclado = event.key
   letraTeclado = letraTeclado.toUpperCase()
   console.log(letraTeclado);
-
   document.querySelector('.ponerLetra'). innerHTML = letraTeclado;
+  compararLetra();
 })
 
 // de esta forma le voy a poder poner la indicacion para poder comparar letra por letra en la palabra
